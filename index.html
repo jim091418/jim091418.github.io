@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh">
     
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <link href="https://gmpg.org/xfn/11" rel="profile">
     
-    <link rel="canonical" href="https://jim091418.github.io/">
+    <link rel="canonical" href="http://localhost:1313/">
     
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Cookie網">
   <meta name="twitter:description" content="努力奮發向上的鹹魚">
 
-<meta property="og:url" content="https://jim091418.github.io/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="Cookie網">
   <meta property="og:title" content="Cookie網">
   <meta property="og:description" content="努力奮發向上的鹹魚">
@@ -57,7 +57,7 @@
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/favicon.png">
-    <link rel="alternate" type="application/rss+xml" href="https://jim091418.github.io/index.xml" title="Cookie網" />
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Cookie網" />
 
     
 
@@ -70,7 +70,7 @@
   <div class="container ">
     <div class="sidebar-about">
   <span class="site__title">
-    <a href="https://jim091418.github.io/">
+    <a href="http://localhost:1313/">
     
       Cookie網
     
@@ -81,7 +81,7 @@
     
     
     <div class="author-image">
-      <img src="https://jim091418.github.io/img/Q_shiba.png" alt="Author Image" class="img--circle img--headshot element--center">
+      <img src="http://localhost:1313/img/Q_shiba.png" alt="Author Image" class="img--circle img--headshot element--center">
     </div>
     
   
@@ -221,14 +221,69 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
       
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/posts/page1/" >Page1</a>
+          <a href="/thm/agent_sudo/" >Agent Sudo</a>
         </span>
         <span class="item__date">
           Sep 12, 2024
         </span>
         <span >
         
-        test page
+        Agent Sudo environment KALI Linux 10.10.128.188
+TARGET 10.10.231.25
+Enumerate How many open ports? 有多少開放PORT，直接使用NMAP來掃PORT即可得出答案，可從圖片確認有21、22、80
+nmap -A 10.10.231.25 How you redirect yourself to a secret page? 看到80Port習慣先用nmap確認一下http是否有藏甚麼資訊，在圖片中沒看到有用的資訊QQ
+nmap -p80 --script http-enum 10.10.231.25 接著直接上網站確認，網站上面說使用自己的User-Agent來登入此網站，可以使用curl -A 來偽造User-Agent
+What is the agent name? 從第二題題目似乎有需要redirect+User-agent，用help來確認能有甚麼指令
+我們確認網站可以使用target靶機ip，user-agent要使用他們的代號，可以從剛剛確認他們有一個代號R的，首先帶入!從圖片第一句 當中可以發現他們應該是使用A-Z來做代號，接著就是是看A-Z
+curl -A &#34;R&#34; -L 10.10.231.25 測到C的時候發現R寫給Chris(Agent C)的信，R叫C趕快跟J說換掉他的破密碼
+Hash cracking and brute-force FTP password 這邊題目直接說brute-force了，那就可以直接暴力破解，user就直接用上面所知道的chris，密碼字典檔就使用kali自帶的rockyou.txt
+hydra -l chris -P /usr/share/wordlists/rockyou.txt ftp://10.10.231.25 Zip file password 登入ftp
+ftp -4 10.10.231.25 裡面有3個檔案 全都下載下來，並離開
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/thm/agent_sudo/">➦</a>
+        
+        </div>
+        
+     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/thm/anonymous/" >Anonumous</a>
+        </span>
+        <span class="item__date">
+          Sep 12, 2024
+        </span>
+        <span >
+        
+        Anonumous PWN Enumerate the machine. How many ports are open? As always, we can use namp to enumerate open ports.
+nmap -sV -sC 10.10.11.170 Starting Nmap 7.60 ( https://nmap.org ) at 2022-11-04 06:15 GMT Nmap scan report for ip-10-10-11-170.eu-west-1.compute.internal (10.10.11.170) Host is up (0.0010s latency). Not shown: 996 closed ports PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 2.0.8 or later | ftp-anon: Anonymous FTP login allowed (FTP code 230) &lt;---can use anonymous login!
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/thm/anonymous/">➦</a>
+        
+        </div>
+        
+     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/thm/bounty_hacker/" >Bounty Hacker</a>
+        </span>
+        <span class="item__date">
+          Sep 12, 2024
+        </span>
+        <span >
+        
+        Bounty Hacker environment KALI Linux ip 10-10-144-240
+TARGET 10.10.215.4
+Oh no! We&rsquo;ve been hacked! Who wrote the task list? FTP用anonymous登入即可獲得檔案 What service can you bruteforce with the text file found? ssh，nmap只有ftp、ssh、http What is the users password? 剛剛FTP中獲取LIN跟一個LOCK.TXT，LOCK.TXT當字典用HYDRA破解即可 user.txt 登入後CAT user.txt root.txt sudo -l可以看到tar有root權限，在google搜尋privilege tar root，即有相關方法，得到後cat /root/root.txt即可 
         
         </span>
         
@@ -240,16 +295,184 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
       
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/posts/my-first-post/" >My First Post</a>
+          <a href="/thm/cyborg/" >Cyborg</a>
         </span>
         <span class="item__date">
           Sep 12, 2024
         </span>
         <span >
         
-        
+        Cyborg environment KALI Linux ip 10.10.144.240
+TARGET 10.10.221.58
+Compromise the System Scan the machine, how many ports are open? nmap起手
+nmap -sV 10.10.221.58 What service is running on port 22? 如圖ssh What service is running on port 80? 如圖http What is the user.txt flag? 先用nmap掃是否有其他網頁
+nmap -p80 --script http-enum 10.10.221.58 可以先從/admin開始看，裡面可以找到以下資訊，主要是說這個管理員掛不起來squid proxy，然後說music_archive他很確定很安全，因此 music_archive應該是滿重要的東西
+從/etc看裡面有一個passwdd，然後有看到music_archive這關鍵字，後面是一段hash
+先使用hash-identifier確認加密方式(https://github.com/blackploit/hash-identifier)
+等等會使用hashcat密碼破解，需先確認md5(APR)代號是多少(https://hashcat.net/wiki/doku.php?id=example_hashes)
+先將剛剛的hash存成hash.txt，如果沒注意到crack的密碼，密碼會存在~/.hashcat/hashcat.potfile裡面
+hashcat --force -a 0 -m 1600 hash.txt /usr/share/wordlists/rockyou.txt 總結一下目前獲得資訊music_archive squidward
+接著從他admin網頁可以下載一個檔案，解壓縮後裡面有這些檔案
+README說這是一個borg backup檔案
         
         </span>
+        
+          ... <a class="read-more-symbol" href="/thm/cyborg/">➦</a>
+        
+        </div>
+        
+     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/thm/dogcat/" >DogCat</a>
+        </span>
+        <span class="item__date">
+          Sep 12, 2024
+        </span>
+        <span >
+        
+        DOGCAT FLAG1 First, I press F12 want to find any clue, but I don&rsquo;y find.
+Seccond, I press DOG and CAT button, I got a lot cute picture, and I know view only allow dog or cat word. Now I try php wraper to take web code.
+http://10.10.162.32//?view=php://filter/convert.base64-encode/resource=dog Got a text base on base64. Decode, and then we know cute picture will be readomly picked out of ten.
+Now, we try to take /etc/passwd
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/thm/dogcat/">➦</a>
+        
+        </div>
+        
+     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/thm/h4cked/" >h4cked</a>
+        </span>
+        <span class="item__date">
+          Sep 12, 2024
+        </span>
+        <span >
+        
+        h4cked environment KALI Linux ip 10.10.136.98
+TARGET 10.10.194.25
+Oh no! We&rsquo;ve been hacked! The attacker is trying to log into a specific service. What service is this? 隨便往下滑，即可知道在FTP-Brute-Force
+There is a very popular tool by Van Hauser which can be used to brute force a series of services. What is the name of this tool? Hydra，這題直接直覺猜的，因為5碼還有基本上都是用這工具xD
+The attacker is trying to log on with a specific username. What is the username?
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/thm/h4cked/">➦</a>
+        
+        </div>
+        
+     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/thm/mr_robot/" >Mr.Robot CTF</a>
+        </span>
+        <span class="item__date">
+          Sep 12, 2024
+        </span>
+        <span >
+        
+        Mr.Robot CTF environment KALI Linux ip 10.10.228.21
+TARGET 10.10.106.11
+Hack the machine key1 First,use nmap to confirm which port is open nmap -sV -sC 10.10.106.11 We know that port 80 443 is open, we can check port 80 and 443 .
+http://10.10.106.11,we got like hacker command line interface,but that just say why Mr.Robo hacker billionaire.
+I think that can use nmap to scan http
+nmap -p80 --script http-enum 10.10.106.11 We got some page information,first,I visit robots.
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/thm/mr_robot/">➦</a>
+        
+        </div>
+        
+     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/thm/revenge/" >Revenge</a>
+        </span>
+        <span class="item__date">
+          Sep 12, 2024
+        </span>
+        <span >
+        
+        Revenge Learning how to find sqli entry point exploit sql by sqlmap privilege escalation by systemctl brute force ssh crack by hydra Revenge! flag1
+nmap to scan target,and we know port 22 and 80 open. Starting Nmap 7.60 ( https://nmap.org ) at 2022-11-22 04:58 GMT Nmap scan report for ip-10-10-68-32.eu-west-1.compute.internal (10.10.68.32) Host is up (0.021s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/thm/revenge/">➦</a>
+        
+        </div>
+        
+     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/thm/simple_ctf/" >Simple CTF</a>
+        </span>
+        <span class="item__date">
+          Sep 12, 2024
+        </span>
+        <span >
+        
+        Simple CTF environment KALI Linux ip-10-10-10-219
+TARGET 10.10.158.21
+Simple CTF How many services are running under port 1000? EZ,NAMP掃描，
+nmap -sV 10.10.158.21 What is running on the higher port? 從namp看到是2222 ssh
+What&rsquo;s the CVE you&rsquo;re using against the application? 這題感覺有點怪，他3個PORT都有CVE，但題目這邊要的是80PORT上面有跑一個SIMPLE網頁，裡面有一個CSMS的漏洞 具體如下操作如下，先使用gobuster確認網頁
+先使用gobuster來測試
+gobuster dir -u http://10.10.158.21 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 發現有simple 301
+接著這邊有看到CMS Made Simple v 2.2.8可以利用這個來看有沒有CVE漏洞
+To what kind of vulnerability is the application vulnerable? 此是利用SQL INJECTION，題目題是****，結果試了很久，才知道答案是縮寫SQLi&hellip;
+What&rsquo;s the password? 利用剛剛找的PYTHON，我是使用python3的腳本(https://github.com/4nner/CVE-2019-9053 )
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/thm/simple_ctf/">➦</a>
+        
+        </div>
+        
+     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/thm/tomghost/" >Tomghost</a>
+        </span>
+        <span class="item__date">
+          Sep 12, 2024
+        </span>
+        <span >
+        
+        tomghost environment KALI Linux ip 10.10.214.53
+TARGET 10.10.94.155
+Flags Compromise this machine and obtain user.txt First step, we namp scan which port are open and vulnerability
+nmap -sV -sC 10.10.94.155 We know port 22 53 8009 8080 are open
+Now we visit 8080 page, and enumerate it.
+Enumerate web page
+In short , we got Apache Tomcat V9.0.30 and /examples. These two points seems to be injection.
+Now we search vulnerability on google.
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/thm/tomghost/">➦</a>
         
         </div>
         

@@ -6,7 +6,21 @@
     <description>Recent content in Posts on Cookie網</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Thu, 12 Sep 2024 23:14:19 -0400</lastBuildDate>
     <atom:link href="https://jim091418.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Page1</title>
+      <link>https://jim091418.github.io/posts/page1/</link>
+      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
+      <guid>https://jim091418.github.io/posts/page1/</guid>
+      <description>test page</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>https://jim091418.github.io/posts/my-first-post/</link>
+      <pubDate>Thu, 12 Sep 2024 23:05:27 -0400</pubDate>
+      <guid>https://jim091418.github.io/posts/my-first-post/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

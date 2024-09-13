@@ -6,7 +6,35 @@
     <description>Recent content on Cookie網</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Thu, 12 Sep 2024 23:14:19 -0400</lastBuildDate>
     <atom:link href="https://jim091418.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Page1</title>
+      <link>https://jim091418.github.io/posts/page1/</link>
+      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
+      <guid>https://jim091418.github.io/posts/page1/</guid>
+      <description>test page</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>https://jim091418.github.io/posts/my-first-post/</link>
+      <pubDate>Thu, 12 Sep 2024 23:05:27 -0400</pubDate>
+      <guid>https://jim091418.github.io/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent Sudo</title>
+      <link>https://jim091418.github.io/thm/agent_sudo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jim091418.github.io/thm/agent_sudo/</guid>
+      <description>Agent Sudo environment KALI Linux 10.10.128.188&#xA;TARGET 10.10.231.25&#xA;Enumerate How many open ports? 有多少開放PORT，直接使用NMAP來掃PORT即可得出答案，可從圖片確認有21、22、80&#xA;nmap -A 10.10.231.25 How you redirect yourself to a secret page? 看到80Port習慣先用nmap確認一下http是否有藏甚麼資訊，在圖片中沒看到有用的資訊QQ&#xA;nmap -p80 --script http-enum 10.10.231.25 接著直接上網站確認，網站上面說使用自己的User-Agent來登入此網站，可以使用curl -A 來偽造User-Agent&#xA;What is the agent name? 從第二題題目似乎有需要redirect+User-agent，用help來確認能有甚麼指令&#xA;我們確認網站可以使用target靶機ip，user-agent要使用他們的代號，可以從剛剛確認他們有一個代號R的，首先帶入!從圖片第一句 當中可以發現他們應該是使用A-Z來做代號，接著就是是看A-Z&#xA;curl -A &amp;#34;R&amp;#34; -L 10.10.231.25 測到C的時候發現R寫給Chris(Agent C)的信，R叫C趕快跟J說換掉他的破密碼&#xA;Hash cracking and brute-force FTP password 這邊題目直接說brute-force了，那就可以直接暴力破解，user就直接用上面所知道的chris，密碼字典檔就使用kali自帶的rockyou.txt&#xA;hydra -l chris -P /usr/share/wordlists/rockyou.txt ftp://10.10.231.25 Zip file password 登入ftp&#xA;ftp -4 10.10.231.25 裡面有3個檔案 全都下載下來，並離開</description>
+    </item>
+    <item>
+      <title>Anonumous</title>
+      <link>https://jim091418.github.io/thm/anonymous/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jim091418.github.io/thm/anonymous/</guid>
+      <description>Anonumous PWN Enumerate the machine. How many ports are open? As always, we can use namp to enumerate open ports.&#xA;nmap -sV -sC 10.10.11.170 Starting Nmap 7.60 ( https://nmap.org ) at 2022-11-04 06:15 GMT Nmap scan report for ip-10-10-11-170.eu-west-1.compute.internal (10.10.11.170) Host is up (0.0010s latency). Not shown: 996 closed ports PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 2.0.8 or later | ftp-anon: Anonymous FTP login allowed (FTP code 230) &amp;lt;---can use anonymous login!</description>
+    </item>
   </channel>
 </rss>

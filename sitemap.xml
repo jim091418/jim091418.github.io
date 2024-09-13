@@ -2,46 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://jim091418.github.io/</loc>
     <lastmod>2024-09-13T01:59:27-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/thm/</loc>
+    <loc>https://jim091418.github.io/thm/</loc>
     <lastmod>2024-09-13T01:59:27-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://jim091418.github.io/about/</loc>
     <lastmod>2024-09-13T01:39:38-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/page1/</loc>
+    <loc>https://jim091418.github.io/thm/agent_sudo/</loc>
     <lastmod>2024-09-12T23:14:19-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://jim091418.github.io/thm/anonymous/</loc>
     <lastmod>2024-09-12T23:14:19-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <loc>https://jim091418.github.io/thm/bounty_hacker/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/thm/cyborg/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/thm/dogcat/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/thm/h4cked/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/thm/mr_robot/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/posts/page1/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/posts/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/thm/revenge/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/thm/simple_ctf/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/thm/tomghost/</loc>
+    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+  </url><url>
+    <loc>https://jim091418.github.io/posts/my-first-post/</loc>
     <lastmod>2024-09-12T23:05:27-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/thm/agent_sudo/</loc>
+    <loc>https://jim091418.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/thm/anonymous/</loc>
-  </url><url>
-    <loc>http://localhost:1313/thm/bounty_hacker/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/thm/cyborg/</loc>
-  </url><url>
-    <loc>http://localhost:1313/thm/dogcat/</loc>
-  </url><url>
-    <loc>http://localhost:1313/thm/h4cked/</loc>
-  </url><url>
-    <loc>http://localhost:1313/thm/mr_robot/</loc>
-  </url><url>
-    <loc>http://localhost:1313/thm/revenge/</loc>
-  </url><url>
-    <loc>http://localhost:1313/thm/simple_ctf/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/thm/tomghost/</loc>
+    <loc>https://jim091418.github.io/tags/</loc>
   </url>
 </urlset>

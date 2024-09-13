@@ -2,28 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://jim091418.github.io/</loc>
     <lastmod>2024-09-13T01:59:27-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/thm/</loc>
-    <lastmod>2024-09-13T01:59:27-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2024-09-13T01:39:38-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/page1/</loc>
+    <loc>https://jim091418.github.io/posts/</loc>
     <lastmod>2024-09-12T23:14:19-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-09-12T23:14:19-04:00</lastmod>
+    <loc>https://jim091418.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
-    <lastmod>2024-09-12T23:05:27-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/thm/anonymous/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://jim091418.github.io/tags/</loc>
   </url>
 </urlset>

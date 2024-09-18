@@ -2,18 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jim Tang Blog</title>
-<<<<<<< HEAD
     <link>https://jim091418.github.io/tags/</link>
     <description>Recent content in Tags on Jim Tang Blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <atom:link href="https://jim091418.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-=======
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Jim Tang Blog</description>
-    <generator>Hugo</generator>
-    <language>zh</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
->>>>>>> f89cb9f (Initial commit)
   </channel>
 </rss>

@@ -2,199 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jim Tang Blog</title>
-<<<<<<< HEAD
     <link>https://jim091418.github.io/</link>
-=======
-    <link>http://localhost:1313/</link>
->>>>>>> f89cb9f (Initial commit)
     <description>Recent content on Jim Tang Blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 13 Sep 2024 06:13:15 -0400</lastBuildDate>
-<<<<<<< HEAD
     <atom:link href="https://jim091418.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>場次1</title>
       <link>https://jim091418.github.io/taccst/1/</link>
       <pubDate>Fri, 13 Sep 2024 06:13:15 -0400</pubDate>
       <guid>https://jim091418.github.io/taccst/1/</guid>
-=======
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>場次1</title>
-      <link>http://localhost:1313/taccst/1/</link>
-      <pubDate>Fri, 13 Sep 2024 06:13:15 -0400</pubDate>
-      <guid>http://localhost:1313/taccst/1/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>事前聲明 因為本人金魚腦，因此希望能用個記事來記錄曾經滲透過的經驗，標題順序並非個人檢測場次的順序，想到就寫。&#xA;事前Recon 主要網站架構ASP.NET subfinder並未找到太多標的 有幾個旁系網站API並未做好權限控管 大多套件都有更新，只有少數JS未更新至最新版本 大多管理介面有依照防護基準 滲透當天 其實看到主要網站是ASP.NET心理就感覺這場只能寫寫版本過舊or Cookie Header未設定之類的漏洞了，但當天還是有做了一下掙扎，有測試XSS、IDOR、SQLi、CSRF、SSTI、Path Traversal測試。&#xA;XSS&#xA;一開始是使用paraspider抓參數，在使用dalfox去弄，但這樣通常是用網站外面(未登入)，並且有多個重複的注入點，優點就是放著給他跑就好，缺點就是時間很長，但在這一步沒有找到東西。&#xA;後面是使用登陸後的管理者介面在配上Burp Suite+XSS Payload(6xxx多條)有發現一個可以用的，其實當初在手動注入的時候發現網站有block&amp;lt;s、javascript:alert(1)、&amp;lt;img&amp;hellip;etc，再看到有阻擋偽協議的時候，心裡就覺得xss沒啥機會了，但網路上的XSS Payload真的很厲害，裡面當中真的就有一條可以bypass，並且是我沒有看過的方式。在最後的時候就靠著這條Payload打到一個Dom XSS。 IDOR&#xA;本來在找是否有id=1或是downloadfile=1這種，有找到download的注入點，但使用chatgpt寫了一個腳本後，只下載到一堆合法的資料，並未有任何收穫。後續有把管理者的介面網址貼到使用者權限的瀏覽器上面，並未找到權限設置錯誤的網頁。 SQLi&#xA;看到.NET寫的網頁其實就沒有很想要測試SQLi了，我這個只有使用管理者的cookie去跑crawl=2，並且在外面使用paraspider再搭配sqlmapapi去跑，都沒結果就放棄。 CSRF&#xA;與SQLi一樣，使用Burp Suite有看到.NET內建的CSRF Token，有想說有沒有可能失效(死馬當活馬醫的概念)，測試過一次失敗即放棄。 SSTI&#xA;其實對這個漏洞並沒有很深刻的了解，是有夥伴有在之前有打過成功這個漏洞，在Port Swigger練習過幾題，我在一些地方下一些測試語法{{7*7}}、${7*7}，都沒結果後放棄。 Path Traversal&#xA;這個也基本上必做的，因在旁系網站有找到一些問題，並且有看到這個網站有使用FCKeditor，對著步驟本來想說有機會的，但一樣列舉完沒找到問題即放棄。 心得 這次利用網路上大神的XSS Payload拿到first blood，真的XSS無奇不有，看到成功的Payload才知道有這種組合方式，果然阻擋XSS比較好的方式還是詳盡的CSP+網路上現成的套件，如果自己寫真的無法涵蓋住全部的問題!</description>
     </item>
     <item>
       <title>簡介</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/about/me/</link>
       <pubDate>Fri, 13 Sep 2024 05:01:32 -0400</pubDate>
       <guid>https://jim091418.github.io/about/me/</guid>
-=======
-      <link>http://localhost:1313/about/me/</link>
-      <pubDate>Fri, 13 Sep 2024 05:01:32 -0400</pubDate>
-      <guid>http://localhost:1313/about/me/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>關於我 嗨，我是目前任職於大同大學圖書資訊處的jimtang，並且也擔任TACCST的檢測員。在學期間就有碰觸資安相領域，喜歡接觸新的東西，並且將它自動化(or半自動)，在學習的路上遇過很多大神，希望有朝一日可以向這些大神一樣!!&#xA;競賽經驗 2020金盾入圍決賽 教育體系攻防演練佳作(1重大衝擊性、5高衝擊性、1中衝擊性、5低衝擊性) 計劃案 (1)國家實驗研究院國家高速網路與計算中心委託案 計畫項目1：資訊安全基礎入門課程教材 計畫項目2：物聯網設備資安漏洞技術報告 計畫項目3：銀行場域漏洞靶機建置 計畫項目4：車聯網場域漏洞靶機建置 (2)大同公司產學案 計畫名稱：工業物聯網資安管理之研究 </description>
     </item>
     <item>
       <title>Agent Sudo</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/agent_sudo/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/agent_sudo/</guid>
-=======
-      <link>http://localhost:1313/thm/agent_sudo/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/agent_sudo/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>Agent Sudo environment KALI Linux 10.10.128.188&#xA;TARGET 10.10.231.25&#xA;Enumerate How many open ports? 有多少開放PORT，直接使用NMAP來掃PORT即可得出答案，可從圖片確認有21、22、80&#xA;nmap -A 10.10.231.25 How you redirect yourself to a secret page? 看到80Port習慣先用nmap確認一下http是否有藏甚麼資訊，在圖片中沒看到有用的資訊QQ&#xA;nmap -p80 --script http-enum 10.10.231.25 接著直接上網站確認，網站上面說使用自己的User-Agent來登入此網站，可以使用curl -A 來偽造User-Agent&#xA;What is the agent name? 從第二題題目似乎有需要redirect+User-agent，用help來確認能有甚麼指令&#xA;我們確認網站可以使用target靶機ip，user-agent要使用他們的代號，可以從剛剛確認他們有一個代號R的，首先帶入!從圖片第一句 當中可以發現他們應該是使用A-Z來做代號，接著就是是看A-Z&#xA;curl -A &amp;#34;R&amp;#34; -L 10.10.231.25 測到C的時候發現R寫給Chris(Agent C)的信，R叫C趕快跟J說換掉他的破密碼&#xA;Hash cracking and brute-force FTP password 這邊題目直接說brute-force了，那就可以直接暴力破解，user就直接用上面所知道的chris，密碼字典檔就使用kali自帶的rockyou.txt&#xA;hydra -l chris -P /usr/share/wordlists/rockyou.txt ftp://10.10.231.25 Zip file password 登入ftp&#xA;ftp -4 10.10.231.25 裡面有3個檔案 全都下載下來，並離開</description>
     </item>
     <item>
       <title>Anonumous</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/anonymous/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/anonymous/</guid>
-=======
-      <link>http://localhost:1313/thm/anonymous/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/anonymous/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>Anonumous PWN Enumerate the machine. How many ports are open? As always, we can use namp to enumerate open ports.&#xA;nmap -sV -sC 10.10.11.170 Starting Nmap 7.60 ( https://nmap.org ) at 2022-11-04 06:15 GMT Nmap scan report for ip-10-10-11-170.eu-west-1.compute.internal (10.10.11.170) Host is up (0.0010s latency). Not shown: 996 closed ports PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 2.0.8 or later | ftp-anon: Anonymous FTP login allowed (FTP code 230) &amp;lt;---can use anonymous login!</description>
     </item>
     <item>
       <title>Bounty Hacker</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/bounty_hacker/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/bounty_hacker/</guid>
-=======
-      <link>http://localhost:1313/thm/bounty_hacker/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/bounty_hacker/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>Bounty Hacker environment KALI Linux ip 10-10-144-240&#xA;TARGET 10.10.215.4&#xA;Oh no! We&amp;rsquo;ve been hacked! Who wrote the task list? FTP用anonymous登入即可獲得檔案 What service can you bruteforce with the text file found? ssh，nmap只有ftp、ssh、http What is the users password? 剛剛FTP中獲取LIN跟一個LOCK.TXT，LOCK.TXT當字典用HYDRA破解即可 user.txt 登入後CAT user.txt root.txt sudo -l可以看到tar有root權限，在google搜尋privilege tar root，即有相關方法，得到後cat /root/root.txt即可 </description>
     </item>
     <item>
       <title>Cyborg</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/cyborg/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/cyborg/</guid>
-=======
-      <link>http://localhost:1313/thm/cyborg/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/cyborg/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>Cyborg environment KALI Linux ip 10.10.144.240&#xA;TARGET 10.10.221.58&#xA;Compromise the System Scan the machine, how many ports are open? nmap起手&#xA;nmap -sV 10.10.221.58 What service is running on port 22? 如圖ssh What service is running on port 80? 如圖http What is the user.txt flag? 先用nmap掃是否有其他網頁&#xA;nmap -p80 --script http-enum 10.10.221.58 可以先從/admin開始看，裡面可以找到以下資訊，主要是說這個管理員掛不起來squid proxy，然後說music_archive他很確定很安全，因此 music_archive應該是滿重要的東西&#xA;從/etc看裡面有一個passwdd，然後有看到music_archive這關鍵字，後面是一段hash&#xA;先使用hash-identifier確認加密方式(https://github.com/blackploit/hash-identifier)&#xA;等等會使用hashcat密碼破解，需先確認md5(APR)代號是多少(https://hashcat.net/wiki/doku.php?id=example_hashes)&#xA;先將剛剛的hash存成hash.txt，如果沒注意到crack的密碼，密碼會存在~/.hashcat/hashcat.potfile裡面&#xA;hashcat --force -a 0 -m 1600 hash.txt /usr/share/wordlists/rockyou.txt 總結一下目前獲得資訊music_archive squidward&#xA;接著從他admin網頁可以下載一個檔案，解壓縮後裡面有這些檔案&#xA;README說這是一個borg backup檔案</description>
     </item>
     <item>
       <title>DogCat</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/dogcat/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/dogcat/</guid>
-=======
-      <link>http://localhost:1313/thm/dogcat/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/dogcat/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>DOGCAT FLAG1 First, I press F12 want to find any clue, but I don&amp;rsquo;y find.&#xA;Seccond, I press DOG and CAT button, I got a lot cute picture, and I know view only allow dog or cat word. Now I try php wraper to take web code.&#xA;http://10.10.162.32//?view=php://filter/convert.base64-encode/resource=dog Got a text base on base64. Decode, and then we know cute picture will be readomly picked out of ten.&#xA;Now, we try to take /etc/passwd</description>
     </item>
     <item>
       <title>h4cked</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/h4cked/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/h4cked/</guid>
-=======
-      <link>http://localhost:1313/thm/h4cked/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/h4cked/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>h4cked environment KALI Linux ip 10.10.136.98&#xA;TARGET 10.10.194.25&#xA;Oh no! We&amp;rsquo;ve been hacked! The attacker is trying to log into a specific service. What service is this? 隨便往下滑，即可知道在FTP-Brute-Force&#xA;There is a very popular tool by Van Hauser which can be used to brute force a series of services. What is the name of this tool? Hydra，這題直接直覺猜的，因為5碼還有基本上都是用這工具xD&#xA;The attacker is trying to log on with a specific username. What is the username?</description>
     </item>
     <item>
       <title>Mr.Robot CTF</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/mr_robot/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/mr_robot/</guid>
-=======
-      <link>http://localhost:1313/thm/mr_robot/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/mr_robot/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>Mr.Robot CTF environment KALI Linux ip 10.10.228.21&#xA;TARGET 10.10.106.11&#xA;Hack the machine key1 First,use nmap to confirm which port is open nmap -sV -sC 10.10.106.11 We know that port 80 443 is open, we can check port 80 and 443 .&#xA;http://10.10.106.11,we got like hacker command line interface,but that just say why Mr.Robo hacker billionaire.&#xA;I think that can use nmap to scan http&#xA;nmap -p80 --script http-enum 10.10.106.11 We got some page information,first,I visit robots.</description>
     </item>
     <item>
       <title>Page1</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/posts/page1/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/posts/page1/</guid>
-=======
-      <link>http://localhost:1313/posts/page1/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/posts/page1/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>test page</description>
     </item>
     <item>
       <title>Revenge</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/revenge/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/revenge/</guid>
-=======
-      <link>http://localhost:1313/thm/revenge/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/revenge/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>Revenge Learning how to find sqli entry point exploit sql by sqlmap privilege escalation by systemctl brute force ssh crack by hydra Revenge! flag1&#xA;nmap to scan target,and we know port 22 and 80 open. Starting Nmap 7.60 ( https://nmap.org ) at 2022-11-22 04:58 GMT Nmap scan report for ip-10-10-68-32.eu-west-1.compute.internal (10.10.68.32) Host is up (0.021s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.</description>
     </item>
     <item>
       <title>Simple CTF</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/simple_ctf/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/simple_ctf/</guid>
-=======
-      <link>http://localhost:1313/thm/simple_ctf/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/simple_ctf/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>Simple CTF environment KALI Linux ip-10-10-10-219&#xA;TARGET 10.10.158.21&#xA;Simple CTF How many services are running under port 1000? EZ,NAMP掃描，&#xA;nmap -sV 10.10.158.21 What is running on the higher port? 從namp看到是2222 ssh&#xA;What&amp;rsquo;s the CVE you&amp;rsquo;re using against the application? 這題感覺有點怪，他3個PORT都有CVE，但題目這邊要的是80PORT上面有跑一個SIMPLE網頁，裡面有一個CSMS的漏洞 具體如下操作如下，先使用gobuster確認網頁&#xA;先使用gobuster來測試&#xA;gobuster dir -u http://10.10.158.21 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 發現有simple 301&#xA;接著這邊有看到CMS Made Simple v 2.2.8可以利用這個來看有沒有CVE漏洞&#xA;To what kind of vulnerability is the application vulnerable? 此是利用SQL INJECTION，題目題是****，結果試了很久，才知道答案是縮寫SQLi&amp;hellip;&#xA;What&amp;rsquo;s the password? 利用剛剛找的PYTHON，我是使用python3的腳本(https://github.com/4nner/CVE-2019-9053 )</description>
     </item>
     <item>
       <title>Tomghost</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/thm/tomghost/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/tomghost/</guid>
-=======
-      <link>http://localhost:1313/thm/tomghost/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>http://localhost:1313/thm/tomghost/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description>tomghost environment KALI Linux ip 10.10.214.53&#xA;TARGET 10.10.94.155&#xA;Flags Compromise this machine and obtain user.txt First step, we namp scan which port are open and vulnerability&#xA;nmap -sV -sC 10.10.94.155 We know port 22 53 8009 8080 are open&#xA;Now we visit 8080 page, and enumerate it.&#xA;Enumerate web page&#xA;In short , we got Apache Tomcat V9.0.30 and /examples. These two points seems to be injection.&#xA;Now we search vulnerability on google.</description>
     </item>
     <item>
       <title>My First Post</title>
-<<<<<<< HEAD
       <link>https://jim091418.github.io/posts/my-first-post/</link>
       <pubDate>Thu, 12 Sep 2024 23:05:27 -0400</pubDate>
       <guid>https://jim091418.github.io/posts/my-first-post/</guid>
-=======
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Thu, 12 Sep 2024 23:05:27 -0400</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
->>>>>>> f89cb9f (Initial commit)
       <description></description>
     </item>
   </channel>

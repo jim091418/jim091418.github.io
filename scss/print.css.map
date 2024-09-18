@@ -1,7 +1,11 @@
 {
 	"version": 3,
 	"file": "print.css",
+<<<<<<< HEAD
 	"sourceRoot": "/home/kali/jim091418.github.io/mysite",
+=======
+	"sourceRoot": "/home/kali/jim091418.github.io/mysite/mysite",
+>>>>>>> f89cb9f (Initial commit)
 	"sources": [
 		"themes/triple-hyde/assets/scss/print.scss",
 		"themes/triple-hyde/assets/scss/triple-hyde/_variables.scss",

@@ -6,8 +6,15 @@
     <description>Recent content on Jim Tang Blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 13 Sep 2024 06:13:15 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 18 Sep 2024 04:05:54 -0400</lastBuildDate>
     <atom:link href="https://jim091418.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Taccst_scan</title>
+      <link>https://jim091418.github.io/posts/taccst_scan/</link>
+      <pubDate>Wed, 18 Sep 2024 04:05:54 -0400</pubDate>
+      <guid>https://jim091418.github.io/posts/taccst_scan/</guid>
+      <description>為何做這工具 基本上在所有滲透都需先進行Port掃描，並且滲透報告上都會需要，因此想說寫個一鍵腳本來快速完成，腳本如下:&#xA;#!/bin/bash # 請求用戶輸入目標 IP 地址 read -p &amp;#34;請輸入目標 IP 地址: &amp;#34; ip # 執行端口掃描，並將結果保存到 portscan.txt 文件中 echo &amp;#34;正在Port掃描...&amp;#34; nmap -A $ip -oN portscan.txt # 執行 TCP SYN 掃描，並將結果保存到 tcpsynscan.txt 文件中 echo &amp;#34;正在執行 TCP SYN 掃描...&amp;#34; nmap -sS $ip -oN tcpsynscan.txt # 執行 UDP 掃描，並將結果保存到 udpscan.txt 文件中 echo &amp;#34;正在執行 UDP 掃描...&amp;#34; nmap -sU $ip -oN udpscan.txt echo &amp;#34;掃描完成！&amp;#34; 將上面的程式碼複製下來後，即可使用，但其實比較常使用到的會是-sC來查詢是否有有問題的服務or-sV去確認服務版本，上面在實戰通常只是看有沒有奇怪的Port(大部分不會有)，以及寫報告用(重點)。</description>
+    </item>
     <item>
       <title>場次1</title>
       <link>https://jim091418.github.io/taccst/1/</link>
@@ -72,13 +79,6 @@
       <description>Mr.Robot CTF environment KALI Linux ip 10.10.228.21&#xA;TARGET 10.10.106.11&#xA;Hack the machine key1 First,use nmap to confirm which port is open nmap -sV -sC 10.10.106.11 We know that port 80 443 is open, we can check port 80 and 443 .&#xA;http://10.10.106.11,we got like hacker command line interface,but that just say why Mr.Robo hacker billionaire.&#xA;I think that can use nmap to scan http&#xA;nmap -p80 --script http-enum 10.10.106.11 We got some page information,first,I visit robots.</description>
     </item>
     <item>
-      <title>Page1</title>
-      <link>https://jim091418.github.io/posts/page1/</link>
-      <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
-      <guid>https://jim091418.github.io/posts/page1/</guid>
-      <description>test page</description>
-    </item>
-    <item>
       <title>Revenge</title>
       <link>https://jim091418.github.io/thm/revenge/</link>
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
@@ -98,13 +98,6 @@
       <pubDate>Thu, 12 Sep 2024 23:14:19 -0400</pubDate>
       <guid>https://jim091418.github.io/thm/tomghost/</guid>
       <description>tomghost environment KALI Linux ip 10.10.214.53&#xA;TARGET 10.10.94.155&#xA;Flags Compromise this machine and obtain user.txt First step, we namp scan which port are open and vulnerability&#xA;nmap -sV -sC 10.10.94.155 We know port 22 53 8009 8080 are open&#xA;Now we visit 8080 page, and enumerate it.&#xA;Enumerate web page&#xA;In short , we got Apache Tomcat V9.0.30 and /examples. These two points seems to be injection.&#xA;Now we search vulnerability on google.</description>
-    </item>
-    <item>
-      <title>My First Post</title>
-      <link>https://jim091418.github.io/posts/my-first-post/</link>
-      <pubDate>Thu, 12 Sep 2024 23:05:27 -0400</pubDate>
-      <guid>https://jim091418.github.io/posts/my-first-post/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

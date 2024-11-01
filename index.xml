@@ -6,8 +6,15 @@
     <description>Recent content on Jim Tang Blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 18 Sep 2024 04:36:47 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2024 06:13:15 -0400</lastBuildDate>
     <atom:link href="https://jim091418.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>場次2</title>
+      <link>https://jim091418.github.io/taccst/2/</link>
+      <pubDate>Wed, 30 Oct 2024 06:13:15 -0400</pubDate>
+      <guid>https://jim091418.github.io/taccst/2/</guid>
+      <description>事前聲明 因為本人金魚腦，因此希望能用個記事來記錄曾經滲透過的經驗，標題順序並非個人檢測場次的順序，想到就寫。&#xA;事前Recon 旁系網站很多，使用subfinder有找到大量測試標的物 因有測試單位的IP範圍，使用httpx找，也有找到大量測試目標物 測試單位前端應該有防護，因此自動化程式(nuclei、sqlmap、dalfox都有試過)皆無法使用，因此我目標設定為以下 Wordpress LFI，參數是src、file..的網頁 有下載點，看是否能跨權下載 本來想找是否能跨權下載的，找到另一個特別的漏洞，可以修改網頁下載次數的，他網頁顯示的方式為 src=https://jim091418.github.io/file/img/xxxxxxxxxx, 13，並且使用base 64編碼，使用cyberchef把13改為任一數字後可以修改他的下載次數，沒啥用的漏洞，但還是可能會造成低的危害，例如:有無聊人士直接把所有數字改為8787或是很長的數字串，都會有入侵過的痕跡，影響聲譽 找尋可以儲存輸入文字的地方，例如搜尋欄、留言&amp;hellip;，找XSS注入點 帳號密碼測試核心系統皆沒問題! 滲透當天 這次看到測試目標物還挺多的，而且有較高級的系統，原本以為會不好打，但實際打完後，還是找到滿多問題的，而且這次是唯一一次可以跟夥伴一起開心宵夜，平常都是第一天去還有一些東西沒找到，回去還要惡補，這次相比於之前真得輕鬆一點。&#xA;SQL Injection&#xA;這個我本來沒有想找，因為以經驗來說，已經比較少單位有這漏洞了，所以我一開始是忽略這個，但後面有發現其他人有找到這個問題，我就想說可能這單位還沒有注意，就對我負責的系統下 --crawl=2 --form --cookie=&#39;xxxxx&#39; 過一陣子就抓到洞了，還不用手動測試!&#xA;XSS&#xA;這部分是當天比較認真測試的，我這次有負責兩個系統，但A系統很快就發現SQLi了，並且B系統的等級也是比較高，因此都在測試B系統的XSS，不過在測試的時候因為是測試機，應該有一些東西跟正式機有點不一樣，我下到某一些Payload就500(interanl error)，感覺是有觸發到，但是沒辦法驗證&amp;hellip;，後面有發現可以填寫個人網址的地方，就用很經典的偽協議javascript:alert(1) 成功觸發!&#xA;權限跨越&#xA;這個也是很常見的問題，在測試的時候就打開兩邊不同權限的帳號，看看哪邊不一樣，很快就有找到可以跨權下載的問題。&#xA;API測試&#xA;這個是比較特別的，通常我比較少做API測試，因為時間少+上不太熟悉QAQ，這次時間比較充裕，並且單位剛好有API，就想說來挑戰看看，一開始因他有/api這個目錄，我是先使用目錄遍歷，看是否有createuser、deleteuser類似這樣簡單的漏洞利用，但因為是大廠商，果然沒有這問題，後來是將一些api截錄下來，看是否有injection的問題，結果也沒有。當準備放棄的時候，我去try他的方法，竟然裡面有delete，我就將原先PUT的改為delete，結果正常刪除!剛好他的PUT方法很簡單，都是PUT /api/conent/1，後面才是json檔案的，但delete他只要知道api/content/x即可，因此我可以用這個api將所有文章刪除，順利找到一個api漏洞!&#xA;心得 這次真的輕鬆很多，因為這次單位是第一次做，所以可以感覺到問題有稍微比較好找一點。這次有順利挑戰API，但因正式機，我不太敢下太侵略的語法，不然我覺得會有更大危害的漏洞，不過有找到問題點了，剩下就交給廠商自行去找哈哈。</description>
+    </item>
     <item>
       <title>Sqlmapapi_tools</title>
       <link>https://jim091418.github.io/posts/sqlmapapi_tools/</link>

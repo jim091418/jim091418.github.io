@@ -6,8 +6,15 @@
     <description>Recent content on Jim Tang Blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 18 Sep 2024 04:05:54 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 18 Sep 2024 04:36:47 -0400</lastBuildDate>
     <atom:link href="https://jim091418.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sqlmapapi_tools</title>
+      <link>https://jim091418.github.io/posts/sqlmapapi_tools/</link>
+      <pubDate>Wed, 18 Sep 2024 04:36:47 -0400</pubDate>
+      <guid>https://jim091418.github.io/posts/sqlmapapi_tools/</guid>
+      <description>為何做這工具 每次在hitcon zeroday看的時候，都會發現某些人特別會尋找sqli，點進去看其實都是同一個injection點，因此我在想應該是使用google hacking(google dork)去爬的，之後再丟到sqlmap去找，是知道sqlmap有一個參數-m是可以跑大量url的，但是他會一條一條url去跑，不會跑threads，因此速度非常慢，因錯陽差的情況下看到了sqlmapapi這工具，突然像是發現新大陸，50條url不用5分鐘就可以全部跑完。</description>
+    </item>
     <item>
       <title>Taccst_scan</title>
       <link>https://jim091418.github.io/posts/taccst_scan/</link>

@@ -6,8 +6,15 @@
     <description>Recent content on Jim Tang Blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 30 Oct 2024 06:13:15 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2024 22:22:13 -0500</lastBuildDate>
     <atom:link href="https://jim091418.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web_fuzz</title>
+      <link>https://jim091418.github.io/htb/web_fuzz/</link>
+      <pubDate>Wed, 06 Nov 2024 22:22:13 -0500</pubDate>
+      <guid>https://jim091418.github.io/htb/web_fuzz/</guid>
+      <description>Directory and File Fuzzing Web Fuzz是很重要的東西，在列舉出一些有漏洞的問題前(包含自動化工具)，第一步驟全都是做Fuzz，通常會需要列舉的是:&#xA;敏感資訊(Sensitive Data):通常是.bak、web.config、.git、個人用戶資料&#xA;版本資訊(Outdated Content):版本資訊，常見的是wordpress。&#xA;測試資源(Devlopement Resource):測試網頁、管理後台&#xA;隱藏資源(Hidden Function):可能是新增、管理User等等，廠商沒把它做好權限控管&#xA;下面是常見的字典表:&#xA;/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:這是我最常用的字典檔案，不會太多或太少，通常這個字典檔案沒有我就不會再繼續測試了&#xA;/usr/share/wordlists/seclists/Discovery/Web-Content/common.txt:大約5000多條的列舉，少用&#xA;/usr/share/wordlists/seclists/Discovery/Web-Content/raft-large-directories.txt:針對常見目錄的列舉&#xA;/usr/share/wordlists/seclists/Discovery/Web-Content/big.txt :很大量的，如果確定要使用列舉來解決，上面medium沒找到，我會使用這個&#xA;列舉可以用很多工具ffuf、gobuseter、dirb&amp;hellip;很多，但因HTB使用ffuf來舉例，我後面所有題目都用ffuf來解題。&#xA;基本用法:&#xA;ffuf -u http://94.237.63.109:43150/webfuzzing_hidden_path/flag/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 500 -c -e .html,.txt,.bak,.php&#xA;-u 目標網址，後面記得要加FUZZ，字典檔案都會把它加在上面&#xA;-w 字典檔案&#xA;-t 要跑的threads數量&#xA;-c 高亮模式，我白色看不太習慣，因此都會用這種有特別顏色的&#xA;-e 後面要帶什麼，我上面的範例就是多加.html、.txt這樣&#xA;Hack the Box題目:&#xA;可以使用列舉找到flag.html檔案即可(可以看到他字典檔案的註解也會吃進去，後面會交如何解決)&#xA;Recursive Fuzzing 剛剛那個是單一目錄以及檔案的Fuzz，但是在實際狀況目標通常會隱藏在一些目錄底下(例如:ckeditor.html)，所以會需要Recursive Fuzz，這意思是說假設我發現admin這個目錄，它會自動在Fuzz，admin這目錄，在實際滲透跟打題目這都會是必備需要的參數，很少(甚至沒有)直接碰到有問題的目標的!&#xA;ffuf用法如下:&#xA;ffuf -u http://94.237.59.237:43171/recursive_fuzz/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -recoursion -ic -v&#xA;-recoursion就跟他名稱一樣，recoursion fuzz&#xA;-ic 剛剛有很多註解他都算是200，如果沒有這個-ic他會把那些註解都一起recoursioin fuzz，所以需要加這參數，他會忽略註解&#xA;-v 比原本在更詳細顯示資料&#xA;Hack the Box題目:&#xA;Fuzz到以下目錄，直接看網頁即可得到flag</description>
+    </item>
     <item>
       <title>場次2</title>
       <link>https://jim091418.github.io/taccst/2/</link>
